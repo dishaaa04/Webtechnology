@@ -1,0 +1,25 @@
+{
+	"folders": [
+		{
+			"path": "../KO19ROM"
+		},
+		{
+			"path": "../htmlProjects"
+		},
+		{
+			"path": "C:/Users/Hp/Downloads/Portfolio"
+		},
+		{
+			"path": "C:/Users/Hp/Desktop/My_Portfolio"
+		},
+		{
+			"path": "../cssProjects"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "css"
+	}
+}

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #fff;
+        }
+
+        .nav-container{
+            margin-bottom: 40px;
+        }
+        h2{
+            margin-bottom: 20px;
+        }
+        .nav1{
+            border: 2px solid red;
+            background-color: aqua;
+        }
+        .nav1 ul{
+            list-style-type: none;
+            display: flex;
+            justify-content: space-around;
+            margin: 0;
+            padding: 0;
+        }
+        .nav1 li{
+            display:inline;
+        }
+        .nav1 a{
+            text-decoration: none;
+            color: #fff;
+            background-color: brown;
+            padding: 5px 15px;
+            position: relative;
+
+        }
+
+        .nav1 a::after{
+            content: "abc";
+            position:absolute;
+            height: 2px;
+            width: 100%;
+            bottom: 0;
+            left:0;
+            background-color: blue;
+            transform:scaleX(0);
+            transition: transform 0.3s
+            ease-in-out;
+
+        }
+     
+
+        .nav1 .login-btn{
+            background-color: blue;
+        border: none;
+        color: white;
+        border-radius: 5px;
+        padding: 5px 15px;
+        cursor: pointer;
+        }
+
+        .nav2 ul{
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+ .nav2 a{
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+ }
+
+ .nav2 .login-btn:hover{
+    cursor:pointer;
+    background-color: aqua;
+ }
+    </style>
+</head>
+<body>
+    <div class="nav-container"></div>
+    <h2>Variation 1: Horizontal with underline effect</h2>
+    <nav class="nav1">
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Products</a></li>
+        <li> <button class="login-btn">Login</button></li>
+    </ul>
+</nav>
+<div class="nav-container"></div>
+<h2>Variation 2: Vertical with hover effect</h2>
+<nav class="nav2">
+<ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Products</a></li>
+    <li> <button class="login-btn">Login</button></li>
+</ul>
+</nav>
+<div class="nav-container"></div>
+<h2>Variation 3: Vertical with hover effect</h2>
+<nav class="nav3">
+<ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Products</a></li>
+    <li> <button class="login-btn">Login</button></li>
+</ul>
+</nav>
+</body>
+</html>

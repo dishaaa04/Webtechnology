@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EduWave - Immersive Learning Experience</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+<body>
+  <header id="header">
+    <div class="container nav">
+      <a href="#" class="logo">
+        <div class="logo-icon">E</div>
+        Edu<span>Wave</span>
+      </a>
+      <nav>
+        <ul id="nav-menu">
+          <li><a href="#" class="animated-link active">Home</a></li>
+          <li><a href="#courses" class="animated-link">Courses</a></li>
+          <li><a href="#features" class="animated-link">Features</a></li>
+          <li><a href="#instructors" class="animated-link">Instructors</a></li>
+          <li><a href="#testimonials" class="animated-link">Testimonials</a></li>
+          <div class="auth-buttons">
+            <a href="#" class="btn btn-outline">Sign In</a>
+            <a href="#" class="btn btn-primary">Register</a>
+          </div>
+        </ul>
+        <button class="mobile-menu-btn" id="mobile-menu-btn">
+          <i class="fas fa-bars"></i>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="floating-shapes">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <canvas id="canvas-background"></canvas>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-text reveal">
+          <h1>Unleash Your Potential With <span>Interactive</span> Learning</h1>
+          <p>Join over 500,000 learners mastering in-demand skills with our innovative learning platform designed for the digital age.</p>
+          <div class="hero-buttons">
+            <a href="#courses" class="btn btn-secondary">Explore Courses</a>
+            <a href="#" class="btn btn-outline">Start Free Trial</a>
+          </div>
+        </div>
+        <img src="/api/placeholder/500/400" alt="Learning Illustration" class="hero-image reveal">
+      </div>
+    </div>
+    <div class="wave"></div>
+  </section>
+
+  <section class="stats">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item reveal">
+          <h3 class="counter">500K+</h3>
+          <p>Active Students</p>
+        </div>
+        <div class="stat-item reveal">
+          <h3 class="counter">1,200+</h3>
+          <p>Total Courses</p>
+        </div>
+        <div class="stat-item reveal">
+          <h3 class="counter">150+</h3>
+          <p>Expert Instructors</p>
+        </div>
+        <div class="stat-item reveal">
+          <h3 class="counter">97%</h3>
+          <p>Success Rate</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="features" id="features">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>Why Choose EduWave</h2>
+        <p>Discover how our innovative approach to online education sets us apart and empowers learners worldwide.</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card reveal">
+          <div class="feature-content">
+            <div class="feature-icon">
+              <i class="fas fa-certificate"></i>
+            </div>
+            <h3>Certified Instructors</h3>
+            <p>Learn from industry professionals with real-world experience who are passionate about sharing their knowledge.</p>
+            <a href="#" class="animated-link">Learn More</a>
+          </div>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-content">
+            <div class="feature-icon">
+              <i class="fas fa-clock"></i>
+            </div>
+            <h3>Flexible Learning</h3>
+            <p>Study at your own pace, anytime and anywhere with our adaptive learning platform that fits your schedule.</p>
+            <a href="#" class="animated-link">Learn More</a>
+          </div>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-content">
+            <div class="feature-icon">
+              <i class="fas fa-infinity"></i>
+            </div>
+            <h3>Lifetime Access</h3>
+            <p>Get unlimited access to all your enrolled courses, including future updates and expanded content.</p>
+            <a href="#" class="animated-link">Learn More</a>
+          </div>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-content">
+            <div class="feature-icon">
+              <i class="fas fa-vr-cardboard"></i>
+            </div>
+            <h3>Interactive Learning</h3>
+            <p>Engage with immersive content through AR/VR experiences, interactive quizzes, and hands-on projects.</p>
+            <a href="#" class="animated-link">Learn More</a>
+          </div>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-content">
+            <div class="feature-icon">
+              <i class="fas fa-users"></i>
+            </div>
+            <h3>Community Support</h3>
+            <p>Join a global community of learners and collaborate in study groups, forums, and peer-to-peer sessions.</p>
+            <a href="#" class="animated-link">Learn More</a>
+          </div>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-content">
+            <div class="feature-icon">
+              <i class="fas fa-laptop-code"></i>
+            </div>
+            <h3>AI-Powered Learning</h3>
+            <p>Experience personalized learning pathways tailored to your goals, preferences, and learning style.</p>
+            <a href="#" class="animated-link">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="courses" id="courses">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>Featured Courses</h2>
+        <p>Explore our highest-rated and most popular courses across various disciplines.</p>
+      </div>
+      
+      <div class="course-filters reveal">
+        <button class="filter-btn active" data-filter="all">All Categories</button>
+        <button class="filter-btn" data-filter="development">Development</button>
+        <button class="filter-btn" data-filter="design">Design</button>
+        <button class="filter-btn" data-filter="business">Business</button>
+        <button class="filter-btn" data-filter="marketing">Marketing</button>
+        <button class="filter-btn" data-filter="data-science">Data Science</button>
+      </div>
+      
+      <div class="course-grid">
+        <div class="course-card reveal" data-category="development">
+          <div class="course-img">
+            <img src="/api/placeholder/400/250" alt="Web Development Course">
+            <div class="course-badge">Bestseller</div>
+          </div>
+          <div class="course-content">
+            <div class="course-meta">
+              <span>15 Modules</span>
+              <span class="course-rating">4.9 ★</span>
+            </div>
+            <h3 class="course-title">Full-Stack Web Development Masterclass</h3>
+            <div class="course-instructor">
+              <div class="instructor-img">
+                <img src="/api/placeholder/100/100" alt="Jane Doe">
+              </div>
+              <span class="instructor-name">Jane Doe</span>
+            </div>
+            <div class="course-footer">
+              <div class="course-price">$89.99</div>
+              <button class="course-btn">Enroll Now</button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="course-card reveal" data-category="data-science">
+          <div class="course-img">
+            <img src="/api/placeholder/400/250" alt="Data Science Course">
+            <div class="course-badge">Hot & New</div>
+          </div>
+          <div class="course-content">
+            <div class="course-meta">
+              <span>12 Modules</span>
+              <span class="course-rating">4.8 ★</span>
+            </div>
+            <h3 class="course-title">Python for Data Science and Machine Learning</h3>
+            <div class="course-instructor">
+              <div class="instructor-img">
+                <img src="/api/placeholder/100/100" alt="John Smith">
+              </div>
+              <span class="instructor-name">John Smith</span>
+            </div>
+            <div class="course-footer">
+              <div class="course-price">$94.99</div>
+              <button class="course-btn">Enroll Now</button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="course-card reveal" data-category="design">
+          <div class="course-img">
+            <img src="/api/placeholder/400/250" alt="UI/UX Design Course">
+          </div>
+          <div class="course-content">
+            <div class="course-meta">
+              <span>10 Modules</span>
+              <span class="course-rating">4.7 ★</span>
+            </div>
+            <h3 class="course-title">UI/UX Design: Create Modern Web Experiences</h3>
+            <div class="course-instructor">
+              <div class="instructor-img">
+                <img src="/api/placeholder/100/100" alt="Sarah Lee">
+              </div>
+              <span class="instructor-name">Sarah Lee</span>
+            </div>
+            <div class="course-footer">
+              <div class="course-price">$79.99</div>
+              <button class="course-btn">Enroll Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="text-center reveal" style="margin-top: 50px;">
+        <a href="#" class="btn btn-primary">View All Courses</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials" id="testimonials">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>What Our Students Say</h2>
+        <p>Discover how EduWave has transformed careers and lives of our students worldwide.</p>
+      </div>
+      
+      <div class="testimonial-slider reveal">
+        <div class="testimonial-track">
+          <div class="testimonial">
+            <div class="testimonial-img">
+              <img src="/api/placeholder/200/200" alt="Mike Johnson">
+            </div>
+            <div class="testimonial-text">
+              "EduWave completely transformed my career. I went from knowing nothing about web development to landing my dream job at a tech startup within just 6 months. The interactive learning approach and supportive community made all the difference."
+            </div>
+            <div class="testimonial-name">Mike Johnson</div>
+            <div class="testimonial-role">Software Developer</div>
+          </div>
+          
+          <div class="testimonial">
+            <div class="testimonial-img">
+              <img src="/api/placeholder/200/200" alt="Emily Chen">
+            </div>
+            <div class="testimonial-text">
+              "As a busy professional, I needed a flexible learning platform that could accommodate my schedule. EduWave delivered exactly that and more. The AI-powered recommendations helped me focus on exactly what I needed to learn."
+            </div>
+            <div class="testimonial-name">Emily Chen</div>
+            <div class="testimonial-role">Marketing Director</div>
+          </div>
+          
+          <div class="testimonial">
+            <div class="testimonial-img">
+              <img src="/api/placeholder/200/200" alt="David Kim">
+            </div>
+            <div class="testimonial-text">
+              "The quality of instruction is unmatched. Having access to industry experts who share practical knowledge rather than just theory has made all the difference in applying what I've learned to real-world scenarios."
+            </div>
+            <div class="testimonial-name">David Kim</div>
+            <div class="testimonial-role">Data Scientist</div>
+          </div>
+        </div>
+        
+        <div class="testimonial-dots">
+          <div class="dot active"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="instructors" id="instructors">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>Meet Our Instructors</h2>
+        <p>Learn from industry experts with years of real-world experience.</p>
+      </div>
+      
+      <div class="instructor-grid">
+        <div class="instructor-card reveal">
+          <div class="instructor-header">
+            <img src="/api/placeholder/300/300" alt="Jane Doe">
+          </div>
+          <div class="instructor-body">
+            <h3>Jane Doe</h3>
+            <p>Senior Web Developer</p>
+            <div class="instructor-stats">
+              <span>15 Courses</span> • <span>20K+ Students</span>
+            </div>
+            <div class="instructor-social">
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="instructor-card reveal">
+          <div class="instructor-header">
+            <img src="/api/placeholder/300/300" alt="John Smith">
+          </div>
+          <div class="instructor-body">
+            <h3>John Smith</h3>
+            <p>AI & Machine Learning Expert</p>
+            <div class="instructor-stats">
+              <span>12 Courses</span> • <span>18K+ Students</span>
+            </div>
+            <div class="instructor-social">
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="instructor-card reveal">
+          <div class="instructor-header">
+            <img src="/api/placeholder/300/300" alt="Sarah Lee">
+          </div>
+          <div class="instructor-body">
+            <h3>Sarah Lee</h3>
+            <p>UX/UI Design Lead</p>
+            <div class="instructor-stats">
+              <span>8 Courses</span> • <span>15K+ Students</span>
+            </div>
+            <div class="instructor-social">
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-dribbble"></i></a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="instructor-card reveal">
+          <div class="instructor-header">
+            <img src="/api/placeholder/300/300" alt="David Chen">
+          </div>
+          <div class="instructor-body">
+            <h3>David Chen</h3>
+            <p>Data Science Specialist</p>
+            <div class="instructor-stats">
+              <span>10 Courses</span> • <span>12K+ Students</span>
+            </div>
+            <div class="instructor-social">
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="container reveal">
+      <h2>Transform Your Career Today</h2>
+      <p>Join thousands of successful students who have advanced their careers with EduWave. Get started with a free 7-day trial.</p>
+      <div>
+        <a href="#" class="btn btn-secondary">Get Started Free</a>
+        <a href="#" class="btn btn-outline">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="newsletter">
+    <div class="container">
+      <div class="newsletter-content reveal">
+        <h3>Join Our Newsletter</h3>
+        <p>Get the latest updates, news, and special offers directly to your inbox.</p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Enter your email address" required>
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-about">
+          <div class="footer-logo">
+            Edu<span>Wave</span>
+          </div>
+          <p>EduWave is a cutting-edge e-learning platform designed to transform education through technology, making quality learning accessible to everyone, everywhere.</p>
+          <div class="footer-social">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-links">
+          <h4 class="footer-heading">Explore</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Courses</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Instructors</a></li>
+            <li><a href="#">Pricing</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-links">
+          <h4 class="footer-heading">Resources</h4>
+          <ul>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Documentation</a></li>
+            <li><a href="#">Community</a></li>
+            <li><a href="#">Student Stories</a></li>
+            <li><a href="#">Help Center</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-contact">
+          <h4 class="footer-heading">Contact</h4>
+          <ul class="footer-links">
+            <li>
+              <i class="fas fa-map-marker-alt"></i>
+              <span>123 Education Street, San Francisco, CA 94103</span>
+            </li>
+            <li>
+              <i class="fas fa-phone-alt"></i>
+              <span>+1 (123) 456-7890</span>
+            </li>
+            <li>
+              <i class="fas fa-envelope"></i>
+              <span>info@eduwave.com</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2025 EduWave. All rights reserved. | Privacy Policy | Terms of Service</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="dark-mode-toggle" id="dark-mode-toggle">
+    <i class="fas fa-moon"></i>
+  </div>
+
+  <script>
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const navMenu = document.getElementById('nav-menu');
+    
+    mobileMenuBtn.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+    });
+    
+    // Testimonial Slider
+    const track = document.querySelector('.testimonial-track');
+    const dots = document.querySelectorAll('.dot');
+    const testimonials = document.querySelectorAll('.testimonial');
+    let currentIndex = 0;
+    
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        goToSlide(index);
+      });
+    });
+    
+    function goToSlide(index) {
+      track.style.transform = `translateX(-${index * 100}%)`;
+      dots.forEach(dot => dot.classList.remove('active'));
+      dots[index].classList.add('active');
+      currentIndex = index;
+    }
+    
+    // Auto slide
+    setInterval(() => {
+      currentIndex = (currentIndex + 1) % testimonials.length;
+      goToSlide(currentIndex);
+    }, 5000);
+    
+    // Course Filtering
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const courseCards = document.querySelectorAll('.course-card');
+    
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Remove active class from all buttons
+        filterBtns.forEach(btn => btn.classList.remove('active'));
+        
+        // Add active class to clicked button
+        btn.classList.add('active');
+        
+        // Get filter value
+        const filter = btn.dataset.filter;
+        
+        // Filter courses
+        courseCards.forEach(card => {
+          if (filter === 'all' || card.dataset.category === filter) {
+            card.style.display = 'block';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+    
+    // Scroll Animations
+    function revealOnScroll() {
+      const reveals = document.querySelectorAll('.reveal');
+      
+      reveals.forEach(element => {
+        const windowHeight = window.innerHeight;
+        const elementTop = element.getBoundingClientRect().top;
+        const elementVisible = 150;
+        
+        if (elementTop < windowHeight - elementVisible) {
+          element.classList.add('active');
+        }
+      });
+    }
+    
+    window.addEventListener('scroll', revealOnScroll);
+    revealOnScroll(); // Call on initial load
+    
+    // Header scroll effect
+    const header = document.getElementById('header');
+    
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 100) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+    
+    // Interactive background with Three.js
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    let renderer;
+    
+    try {
+      const canvas = document.getElementById('canvas-background');
+      renderer = new THREE.WebGLRenderer({
+        canvas: canvas,
+        alpha: true,
+        antialias: true
+      });
+      renderer.setSize(window.innerWidth, window.innerHeight);
+      
+      // Create particles
+      const particlesGeometry = new THREE.BufferGeometry();
+      const particlesCount = 1000;
+      
+      const posArray = new Float32Array(particlesCount * 3);
+      
+      for (let i = 0; i < particlesCount * 3; i++) {
+        posArray[i] = (Math.random() - 0.5) * 5;
+      }
+      
+      particlesGeometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
+      
+      // Materials
+      const particlesMaterial = new THREE.PointsMaterial({
+        size: 0.005,
+        color: 0xffffff,
+        transparent: true
+      });
+      
+      // Mesh
+      const particlesMesh = new THREE.Points(particlesGeometry, particlesMaterial);
+      scene.add(particlesMesh);
+      
+      camera.position.z = 1;
+      
+      // Animation
+      const animate = () => {
+        requestAnimationFrame(animate);
+        particlesMesh.rotation.y += 0.001;
+        renderer.render(scene, camera);
+      };
+      
+      animate();
+      
+      // Handle window resize
+      window.addEventListener('resize', () => {
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+      });
+    } catch (e) {
+      console.log('WebGL not supported or error initializing: ', e);
+      const canvas = document.getElementById('canvas-background');
+      if (canvas) {
+        canvas.style.display = 'none';
+      }
+    }
+    
+    // Dark Mode Toggle
+    const darkModeToggle = document.getElementById('dark-mode-toggle');
+    const body = document.body;
+    
+    darkModeToggle.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+      
+      // Change icon
+      const icon = darkModeToggle.querySelector('i');
+      if (body.classList.contains('dark-mode')) {
+        icon.classList.remove('fa-moon');
+        icon.classList.add('fa-sun');
+      } else {
+        icon.classList.remove('fa-sun');
+        icon.classList.add('fa-moon');
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "../../MiniProjects"
+		},
+		{
+			"path": "."
+		},
+		{
+			"path": "../../KO19ROM/Webtechnology/javascript"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "My_Portfolio"
+	}
+}
